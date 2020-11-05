@@ -33,5 +33,14 @@ main()
     }
     cout << endl;
 
+    string *v = arreglo.buscar("Mexicana:");
+    cout << v << " " << *v << endl;
+    *v = "tortas";
+    
+    for (size_t i = 0; i < arreglo.size(); i++){
+        cout << arreglo[i] << " ";
+    }
+    cout << endl;
+
     return 0;
 }

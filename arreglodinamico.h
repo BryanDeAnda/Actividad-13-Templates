@@ -23,6 +23,8 @@ public:
     void eliminar_final();
     void eliminar_inicio();
     void eliminar(size_t p);
+
+    T* buscar(const T& v);
     
     size_t size();
 
@@ -127,6 +129,19 @@ void Arreglodinamico<T>::eliminar(size_t p)
 
     }
     cont--;
+}
+
+template <class T>
+T* Arreglodinamico<T>::buscar(const T& v)
+{
+
+    for(size_t i = 0; i<cont; i++)
+    {
+        if(v == arreglo[i]){
+            return &arreglo[i];
+        }
+    }
+    return nullptr;
 }
 
 template <class T>
